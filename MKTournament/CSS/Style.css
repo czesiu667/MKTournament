@@ -1,0 +1,338 @@
+﻿body {
+	color: khaki;
+	background-color: black;
+	vertical-align: top;
+}
+
+.Logo {
+	display: block;
+	margin: 0 auto;
+	width: 223px;
+}
+
+.MainMenu {
+	margin-top: 0 !important;
+	position: fixed;
+	top: 0;
+	width: 800px;
+	z-index: 10;
+}
+
+input, select {
+	color: khaki;
+	background-color: black;
+	border-color: khaki;
+	overflow: hidden;
+}
+
+#Wraper {
+	margin: 50px auto 0;
+	width: 800px;
+}
+
+.Header {
+	background-image: url(/Images/Layout/header.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 100px;
+	font-size: 30px;
+}
+
+/*MainBorder*/
+.MainBorder {
+	background-image: url(/Images/Layout/Border/bordeLeftTop.png),url(/Images/Layout/Border/bordeCenterTop.png),url(/Images/Layout/Border/bordeRightTop.png),url(/Images/Layout/Border/lineTop.png),url(/Images/Layout/Border/bordeLeftBottom.png),url(/Images/Layout/Border/bordeCenterBottom.png),url(/Images/Layout/Border/bordeRightBottom.png),url(/Images/Layout/Border/lineBottom.png),url(/Images/Layout/Border/BorderLine.png),url(/Images/Layout/Border/BorderLine.png);
+	background-position: left top,center top,right top,center top,left bottom,center bottom, right bottom, center bottom, left center, right center;
+	background-repeat: no-repeat,no-repeat, no-repeat, repeat-x,no-repeat,no-repeat, no-repeat, repeat-x,repeat-y,repeat-y;
+	background-color: black;
+	padding-top: 150px;
+	padding-bottom: 88px;
+	padding-left: 5px;
+	padding-right: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/*Border*/
+.Border {
+	background-image: url(/Images/Layout/BorderSmall/bordeLeftTop.png),url(/Images/Layout/BorderSmall/bordeRightTop.png),url(/Images/Layout/BorderSmall/bordeRightBottom.png),url(/Images/Layout/BorderSmall/bordeLeftBottom.png),url(/Images/Layout/BorderSmall/lineHorizontal.png),url(/Images/Layout/BorderSmall/lineVertical.png),url(/Images/Layout/BorderSmall/lineHorizontal.png),url(/Images/Layout/BorderSmall/lineVertical.png);
+	background-position: left top,right top,right bottom,left bottom,center top,right center,center bottom,left center;
+	background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,repeat-x,repeat-y,repeat-x,repeat-y;
+	padding: 13px;
+	background-color: #350000;
+	margin-top: 25px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+	.Border > h1 {
+		background-size: contain,contain,calc(100% - 45px) 100%;
+		background-image: url(/Images/Layout/Header/headerLeft.png),url(/Images/Layout/Header/headerRight.png),url(/Images/Layout/Header/headerCenter.png);
+		background-position: left top,right top,center top;
+		background-repeat: no-repeat,no-repeat,no-repeat;
+		padding: 0px 35px;
+		margin: 0 auto;
+		display: table;
+		font: 23px "Times New Roman";
+		position: relative;
+		top: -25px;
+	}
+
+.BorderSmallest {
+	background-image: url(/Images/Layout/BorderSmall/lineCornerLeftTop.png),url(/Images/Layout/BorderSmall/lineCornerRightTop.png),url(/Images/Layout/BorderSmall/lineCornerRightBottom.png),url(/Images/Layout/BorderSmall/lineCornerLeftBottom.png),url(/Images/Layout/BorderSmall/lineHorizontal.png),url(/Images/Layout/BorderSmall/lineVertical.png),url(/Images/Layout/BorderSmall/lineHorizontal.png),url(/Images/Layout/BorderSmall/lineVertical.png);
+	background-position: left top,right top,right bottom,left bottom,center top,right center,center bottom,left center;
+	background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,repeat-x,repeat-y,repeat-x,repeat-y;
+	padding: 5px;
+	background-color: #350000;
+	display: inline-block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/*Menu Horizontal*/
+.MenuHorizontal {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+	width: 100%;
+	font-size: 0;
+}
+
+.MenuHorizontalAfter {
+	width: 100%;
+}
+
+.MenuHorizontal li {
+	display: inline-block;
+	font-size: 20px;
+}
+
+	.MenuHorizontal li a {
+		color: khaki;
+		text-decoration: none;
+		background: url(/Images/Layout/menuLeft.png),url(/Images/Layout/menuRight.png);
+		background-position: left center,right center;
+		background-repeat: no-repeat,no-repeat;
+		background-size: contain,contain;
+		border: none;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+.MenuHorizontal a:hover {
+	background: url(/Images/Layout/menuLeft.png),url(/Images/Layout/menuRight.png),url(/Images/Layout/gradient.png);
+	background-position: left center,right center, center center;
+	background-repeat: no-repeat,no-repeat, no-repeat;
+	background-size: contain,contain, 100% 100%;
+	border: none;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.ScoreBoard {
+	display: block;
+}
+
+.DetailTable {
+	margin-right: 5px;
+	display: inline-block;
+}
+
+	.DetailTable td {
+		width: 140px;
+	}
+
+.ScoreTable {
+	display: table;
+	width: 100%;
+}
+
+	.ScoreTable td {
+		border: 1px solid;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+.HighlightBackground {
+	padding: 5px;
+	background-image: url(/Images/Layout/gradient.png);
+	background-size: 100% 100%;
+}
+
+/*TeamMember*/
+.TeamMember {
+	text-align: center;
+	display: inline-block;
+}
+
+	.TeamMember img {
+		width: 50px;
+		height: 60px;
+	}
+
+.Winner {
+	display: inline;
+}
+
+/*Add User*/
+.AddUser option {
+	height: 70px;
+	line-height: 70px;
+	background-size: 60px 70px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 60px;
+}
+
+.AddUser select {
+	height: 70px;
+	background-size: 60px 70px;
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 60px;
+}
+
+.User img{
+	width: 50px;
+	height: 60px;
+}
+
+.IconList option {
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 60px;
+	padding-left: 60px;
+}
+
+.BlackBackground {
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.50);
+	text-align: initial;
+	font: initial;
+	z-index: 100;
+	padding-top: 200px;
+	text-align: center;
+}
+
+/*Match*/
+.Match {
+	width: 100%;
+}
+
+	.Match .Team:first-child {
+		float: left;
+	}
+
+	.Match .Team:nth-child(2) {
+		float: right;
+	}
+
+	.Match > div:nth-child(3) {
+		margin: 0 auto;
+		text-align: center;
+		width: -moz-min-content;
+	}
+
+.Characters {
+	display: inline-block;
+	width: 278px;
+}
+
+.CharactersInfo {
+	display: inline-block;
+	width: 508px;
+}
+
+.Hidden{
+	display:none;
+}
+/*
+
+
+.CharacterPicker {
+    display:none;
+    width:100%;
+    height:100%;
+    top:0;
+    right:0;
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.50);
+    text-align:initial;
+    font:initial;
+    z-index:100;
+}
+
+.CharacterPicker>.Border {
+    width:508px;
+    margin:0 auto;
+}
+
+
+.UserPicker {
+    display:none;
+    width:100%;
+    height:100%;
+    top:0;
+    right:0;
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.50);
+    text-align:initial;
+    font:initial;
+    z-index:100;
+}
+
+.UserPicker>.Border {
+    width:508px;
+    margin:0 auto;
+}
+
+
+.Team{
+    display: inline-block;
+}
+
+
+
+
+#Header {
+    top:0;
+    position:fixed;
+    width: 800px;
+    background-color:black;
+    text-align:center;
+}
+
+#Header img {
+    width:200px;
+}
+
+#Footer {
+    width: 100%;
+}
+
+.HeaderSmall {
+    background-size: contain,contain,calc(100% - 45px) 100%;
+    background-image: url(/Images/Layout/Header/headerLeft.png),url(/Images/Layout/Header/headerRight.png),url(/Images/Layout/Header/headerCenter.png);
+    background-position: left top,right top,center top;
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    padding: 0px 35px;
+    margin: 0 auto;
+    display: table;
+    font: 25px "Times New Roman";
+}
+
+
+
+.inline {
+    display:inline-block;
+}
+
+
+*/

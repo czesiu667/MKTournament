@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{36E93325-0582-4CB2-9D1D-E6AD0F7BB68E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MKTournament</RootNamespace>
+    <AssemblyName>MKTournament</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\MKDB.mdf" />
+    <Content Include="App_Data\MKDB_log.ldf">
+      <DependentUpon>MKDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Characters.aspx" />
+    <Content Include="Controls\MatchControl.ascx" />
+    <Content Include="Controls\OpenTournamentConfirm.ascx" />
+    <Content Include="Controls\ScoreBoardControl.ascx" />
+    <Content Include="Controls\Unused\CharacterPickerControl.ascx" />
+    <Content Include="Controls\Tournament\NewTournament.ascx" />
+    <Content Include="Controls\User\NewUserControl.ascx" />
+    <Content Include="Controls\PlayerAdd.ascx" />
+    <Content Include="Controls\User\UserControl.ascx" />
+    <Content Include="Controls\Unused\UserPickerControl.ascx" />
+    <Content Include="Controls\TeamControl.ascx" />
+    <Content Include="Controls\TeamMemberControl.ascx" />
+    <Content Include="CSS\Reset.css" />
+    <Content Include="EditTournament.aspx" />
+    <Content Include="Images\Characters\Baraka.png" />
+    <Content Include="Images\Characters\CyberSubZero.png" />
+    <Content Include="Images\Characters\Cyrax.png" />
+    <Content Include="Images\Characters\Ermac.png" />
+    <Content Include="Images\Characters\FreddyKrueger.png" />
+    <Content Include="Images\Characters\Jade.png" />
+    <Content Include="Images\Characters\Jax.png" />
+    <Content Include="Images\Characters\JohnnyCage.png" />
+    <Content Include="Images\Characters\Kabal.png" />
+    <Content Include="Images\Characters\Kano.png" />
+    <Content Include="Images\Characters\Kenshi.png" />
+    <Content Include="Images\Characters\Kitana.png" />
+    <Content Include="Images\Characters\Kratos.png" />
+    <Content Include="Images\Characters\KungLao.png" />
+    <Content Include="Images\Characters\LiuKang.png" />
+    <Content Include="Images\Characters\Mileena.png" />
+    <Content Include="Images\Characters\Nightwolf.png" />
+    <Content Include="Images\Characters\None.png" />
+    <Content Include="Images\Characters\Noob.png" />
+    <Content Include="Images\Characters\QuanChi.png" />
+    <Content Include="Images\Characters\Raiden.png" />
+    <Content Include="Images\Characters\Rain.png" />
+    <Content Include="Images\Characters\Reptile.png" />
+    <Content Include="Images\Characters\Scorpion.png" />
+    <Content Include="Images\Characters\Sektor.png" />
+    <Content Include="Images\Characters\ShangTsung.png" />
+    <Content Include="Images\Characters\Sheeva.png" />
+    <Content Include="Images\Characters\Sindel.png" />
+    <Content Include="Images\Characters\Skarlet.png" />
+    <Content Include="Images\Characters\Smoke.png" />
+    <Content Include="Images\Characters\Sonya.png" />
+    <Content Include="Images\Characters\Stryker.png" />
+    <Content Include="Images\Characters\SubZero.png" />
+    <Content Include="Images\Layout\Border\bordeCenterTop.png" />
+    <Content Include="Images\Layout\CharacterSelection.png" />
+    <Content Include="Images\Layout\vs.png" />
+    <Content Include="Images\logo.ico" />
+    <Content Include="Images\Users\kgawlik.jpg" />
+    <Content Include="Images\Users\None1.png" />
+    <Content Include="Images\Users\test1.jpg" />
+    <Content Include="Images\Users\test2.jpg" />
+    <Content Include="Images\Users\test3.jpg" />
+    <Content Include="ManageTournament.aspx" />
+    <Content Include="TournamentMatches.aspx" />
+    <Content Include="TournamentsArchive.aspx" />
+    <Content Include="CSS\Style.css" />
+    <Content Include="Database\MKDB.sdf" />
+    <Content Include="Controls\Tournament\TournamentControl.ascx" />
+    <Content Include="Images\Layout\BorderSmall\lineCornerRightTop.png" />
+    <Content Include="Images\Layout\BorderSmall\lineCornerRightBottom.png" />
+    <Content Include="Images\Layout\BorderSmall\lineCornerLeftBottom.png" />
+    <Content Include="Images\Layout\BorderSmall\Copy of lineCornerLeftTop.png" />
+    <Content Include="Images\Layout\BorderSmall\lineCornerLeftTop.png" />
+    <Content Include="Images\Layout\header.png" />
+    <Content Include="Images\Layout\Header\headerCenter.png" />
+    <Content Include="Images\Layout\Header\headerLeft.png" />
+    <Content Include="Images\Layout\Header\headerRight.png" />
+    <Content Include="Images\Layout\BorderSmall\bordeLeftBottom.png" />
+    <Content Include="Images\Layout\BorderSmall\bordeLeftTop.png" />
+    <Content Include="Images\Layout\BorderSmall\bordeRightBottom.png" />
+    <Content Include="Images\Layout\BorderSmall\bordeRightTop.png" />
+    <Content Include="Images\Layout\BorderSmall\lineHorizontal.png" />
+    <Content Include="Images\Layout\BorderSmall\lineVertical.png" />
+    <Content Include="Images\Layout\Border\borderLine.png" />
+    <Content Include="Images\Layout\Border\bordeCenterBottom.png" />
+    <Content Include="Images\Layout\Border\bordeLeftBottom.png" />
+    <Content Include="Images\Layout\Border\bordeLeftTop.png" />
+    <Content Include="Images\Layout\Border\bordeRightBottom.png" />
+    <Content Include="Images\Layout\Border\bordeRightTop.png" />
+    <Content Include="Images\Layout\Border\lineBottom.png" />
+    <Content Include="Images\Layout\Border\lineTop.png" />
+    <Content Include="Images\Layout\menuLeft.png" />
+    <Content Include="Images\Layout\menuRight.png" />
+    <Content Include="Images\Layout\mklogo.png" />
+    <Content Include="Images\Layout\gradient.png" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Test.aspx" />
+    <Content Include="Tournaments.aspx" />
+    <Content Include="User.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters.aspx.cs">
+      <DependentUpon>Characters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Characters.aspx.designer.cs">
+      <DependentUpon>Characters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MatchControl.ascx.cs">
+      <DependentUpon>MatchControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MatchControl.ascx.designer.cs">
+      <DependentUpon>MatchControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OpenTournamentConfirm.ascx.cs">
+      <DependentUpon>OpenTournamentConfirm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OpenTournamentConfirm.ascx.designer.cs">
+      <DependentUpon>OpenTournamentConfirm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScoreBoardControl.ascx.cs">
+      <DependentUpon>ScoreBoardControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ScoreBoardControl.ascx.designer.cs">
+      <DependentUpon>ScoreBoardControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unused\CharacterPickerControl.ascx.cs">
+      <DependentUpon>CharacterPickerControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Unused\CharacterPickerControl.ascx.designer.cs">
+      <DependentUpon>CharacterPickerControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tournament\NewTournament.ascx.cs">
+      <DependentUpon>NewTournament.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Tournament\NewTournament.ascx.designer.cs">
+      <DependentUpon>NewTournament.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\NewUserControl.ascx.cs">
+      <DependentUpon>NewUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\User\NewUserControl.ascx.designer.cs">
+      <DependentUpon>NewUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlayerAdd.ascx.cs">
+      <DependentUpon>PlayerAdd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PlayerAdd.ascx.designer.cs">
+      <DependentUpon>PlayerAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\UserControl.ascx.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\User\UserControl.ascx.designer.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Unused\UserPickerControl.ascx.cs">
+      <DependentUpon>UserPickerControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Unused\UserPickerControl.ascx.designer.cs">
+      <DependentUpon>UserPickerControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TeamControl.ascx.cs">
+      <DependentUpon>TeamControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TeamControl.ascx.designer.cs">
+      <DependentUpon>TeamControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TeamMemberControl.ascx.cs">
+      <DependentUpon>TeamMemberControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TeamMemberControl.ascx.designer.cs">
+      <DependentUpon>TeamMemberControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTournament.aspx.cs">
+      <DependentUpon>EditTournament.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditTournament.aspx.designer.cs">
+      <DependentUpon>EditTournament.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTournament.aspx.cs">
+      <DependentUpon>ManageTournament.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageTournament.aspx.designer.cs">
+      <DependentUpon>ManageTournament.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TournamentMatches.aspx.cs">
+      <DependentUpon>TournamentMatches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TournamentMatches.aspx.designer.cs">
+      <DependentUpon>TournamentMatches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TournamentsArchive.aspx.cs">
+      <DependentUpon>TournamentsArchive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TournamentsArchive.aspx.designer.cs">
+      <DependentUpon>TournamentsArchive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\Tournament\TournamentControl.ascx.cs">
+      <DependentUpon>TournamentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Tournament\TournamentControl.ascx.designer.cs">
+      <DependentUpon>TournamentControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tournaments.aspx.cs">
+      <DependentUpon>Tournaments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tournaments.aspx.designer.cs">
+      <DependentUpon>Tournaments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{28cc8790-baf9-46a8-8878-b96db9b5b677}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19919/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

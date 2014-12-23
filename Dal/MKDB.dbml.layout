@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.5, 8.5" name="MKDB">
+  <DataContextMoniker Name="/MKDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a38b8ee5-6201-4637-87f6-96679dab71d3" absoluteBounds="13.25, 4, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MKDBDataContext/Character" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f47a7217-3191-4f99-8d41-a7779768e4a8" absoluteBounds="13.265, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ea085c1-0bf0-4069-9bd1-cbc651ac858c" absoluteBounds="10.875, 6.125, 2, 1.3862939453125014">
+      <DataClassMoniker Name="/MKDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72cf9cbe-b0e1-4e40-9adc-4e5a90c10ffe" absoluteBounds="10.89, 6.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4dc5c00f-33fd-4d08-86bd-7a197b9e509b" absoluteBounds="8.25, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/MKDBDataContext/Match" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11dd663d-6fbe-4654-a859-494ec39085bf" absoluteBounds="8.265, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62549e83-d846-4e13-90a2-8c524dd7ef3b" absoluteBounds="8.375, 4, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MKDBDataContext/Team" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4529e893-b4fb-44f6-8720-b3cc5277ddb3" absoluteBounds="8.39, 4.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7755e52b-cc07-4f77-bf0e-ab76c01006d4" absoluteBounds="10.75, 4, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MKDBDataContext/TeamMember" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6dba920a-6dce-4bd3-8825-4f7a844c9b59" absoluteBounds="10.765, 4.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="403de37e-3b9f-4c54-bcc9-b60db07bf571" absoluteBounds="3.5, 3.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/MKDBDataContext/Tournament" />
+      <nestedChildShapes>
+        <elementListCompartment Id="307928ab-1e6c-4624-af75-7f3276389e86" absoluteBounds="3.515, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e76413a-29ac-44e4-9600-d7553e88adb2" absoluteBounds="0.75, 4, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MKDBDataContext/TournamentType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf7c1b44-1a47-40c7-8411-b6a159238b9a" absoluteBounds="0.765, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.3125 : 4); (9.3125 : 2.77089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MKDBDataContext/Team/Team_Match" />
+      <nodes>
+        <classShapeMoniker Id="62549e83-d846-4e13-90a2-8c524dd7ef3b" />
+        <classShapeMoniker Id="4dc5c00f-33fd-4d08-86bd-7a197b9e509b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.84375 : 4); (9.84375 : 2.77089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MKDBDataContext/Team/Team_Match1" />
+      <nodes>
+        <classShapeMoniker Id="62549e83-d846-4e13-90a2-8c524dd7ef3b" />
+        <classShapeMoniker Id="4dc5c00f-33fd-4d08-86bd-7a197b9e509b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.25 : 4.69314697265625); (12.75 : 4.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MKDBDataContext/Character/Character_TeamMember" />
+      <nodes>
+        <classShapeMoniker Id="a38b8ee5-6201-4637-87f6-96679dab71d3" />
+        <classShapeMoniker Id="7755e52b-cc07-4f77-bf0e-ab76c01006d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.375 : 4.78929768880208); (10.75 : 4.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MKDBDataContext/Team/Team_TeamMember" />
+      <nodes>
+        <classShapeMoniker Id="62549e83-d846-4e13-90a2-8c524dd7ef3b" />
+        <classShapeMoniker Id="7755e52b-cc07-4f77-bf0e-ab76c01006d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.8125 : 6.125); (11.8125 : 5.57859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MKDBDataContext/User/User_TeamMember" />
+      <nodes>
+        <classShapeMoniker Id="2ea085c1-0bf0-4069-9bd1-cbc651ac858c" />
+        <classShapeMoniker Id="7755e52b-cc07-4f77-bf0e-ab76c01006d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 3.625); (4.5 : 1.88544840494792); (8.25 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MKDBDataContext/Tournament/Tournament_Match" />
+      <nodes>
+        <classShapeMoniker Id="403de37e-3b9f-4c54-bcc9-b60db07bf571" />
+        <classShapeMoniker Id="4dc5c00f-33fd-4d08-86bd-7a197b9e509b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.78929768880208); (8.375 : 4.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MKDBDataContext/Tournament/Tournament_Team" />
+      <nodes>
+        <classShapeMoniker Id="403de37e-3b9f-4c54-bcc9-b60db07bf571" />
+        <classShapeMoniker Id="62549e83-d846-4e13-90a2-8c524dd7ef3b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.375 : 4.33214884440104); (5.5 : 4.33214884440104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MKDBDataContext/Team/Team_Tournament" />
+      <nodes>
+        <classShapeMoniker Id="62549e83-d846-4e13-90a2-8c524dd7ef3b" />
+        <classShapeMoniker Id="403de37e-3b9f-4c54-bcc9-b60db07bf571" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.59699625651042); (3.5 : 4.59699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MKDBDataContext/TournamentType/TournamentType_Tournament" />
+      <nodes>
+        <classShapeMoniker Id="5e76413a-29ac-44e4-9600-d7553e88adb2" />
+        <classShapeMoniker Id="403de37e-3b9f-4c54-bcc9-b60db07bf571" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

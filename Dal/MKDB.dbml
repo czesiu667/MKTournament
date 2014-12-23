@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MKDB" Class="MKDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=D:\programowanie\web\MKTournament\MKTournament\App_Data\MKDB.mdf;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="MKDBConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Character" Member="Characters">
+    <Type Name="Character">
+      <Column Name="CharacterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AvatarPath" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Character_TeamMember" Member="TeamMembers" ThisKey="CharacterID" OtherKey="CharacterID" Type="TeamMember" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AvatarPath" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="User_TeamMember" Member="TeamMembers" ThisKey="UserID" OtherKey="UserID" Type="TeamMember" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Match" Member="Matches">
+    <Type Name="Match">
+      <Column Name="MatchID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Result" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstTeamID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SecondTeamID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TournamentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Team_Match" Member="Team" ThisKey="FirstTeamID" OtherKey="TeamID" Type="Team" IsForeignKey="true" />
+      <Association Name="Team_Match1" Member="Team1" ThisKey="SecondTeamID" OtherKey="TeamID" Type="Team" IsForeignKey="true" />
+      <Association Name="Tournament_Match" Member="Tournament" ThisKey="TournamentID" OtherKey="TournamentID" Type="Tournament" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Team" Member="Teams">
+    <Type Name="Team">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TournamentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Team_Match" Member="Matches" ThisKey="TeamID" OtherKey="FirstTeamID" Type="Match" />
+      <Association Name="Team_Match1" Member="Matches1" ThisKey="TeamID" OtherKey="SecondTeamID" Type="Match" />
+      <Association Name="Team_TeamMember" Member="TeamMembers" ThisKey="TeamID" OtherKey="TeamID" Type="TeamMember" />
+      <Association Name="Team_Tournament" Member="Tournaments" ThisKey="TeamID" OtherKey="WinerTeamID" Type="Tournament" />
+      <Association Name="Tournament_Team" Member="Tournament" ThisKey="TournamentID" OtherKey="TournamentID" Type="Tournament" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TeamMember" Member="TeamMembers">
+    <Type Name="TeamMember">
+      <Column Name="TeamMemberID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CharacterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Character_TeamMember" Member="Character" ThisKey="CharacterID" OtherKey="CharacterID" Type="Character" IsForeignKey="true" />
+      <Association Name="Team_TeamMember" Member="Team" ThisKey="TeamID" OtherKey="TeamID" Type="Team" IsForeignKey="true" />
+      <Association Name="User_TeamMember" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tournament" Member="Tournaments">
+    <Type Name="Tournament">
+      <Column Name="TournamentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TournamentTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WinerTeamID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Tournament_Match" Member="Matches" ThisKey="TournamentID" OtherKey="TournamentID" Type="Match" />
+      <Association Name="Tournament_Team" Member="Teams" ThisKey="TournamentID" OtherKey="TournamentID" Type="Team" />
+      <Association Name="Team_Tournament" Member="Team" ThisKey="WinerTeamID" OtherKey="TeamID" Type="Team" IsForeignKey="true" />
+      <Association Name="TournamentType_Tournament" Member="TournamentType" ThisKey="TournamentTypeID" OtherKey="TournamentTypeID" Type="TournamentType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TournamentType" Member="TournamentTypes">
+    <Type Name="TournamentType">
+      <Column Name="TournamentTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TournamentType_Tournament" Member="Tournaments" ThisKey="TournamentTypeID" OtherKey="TournamentTypeID" Type="Tournament" />
+    </Type>
+  </Table>
+</Database>
